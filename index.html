@@ -29,7 +29,7 @@
         camera.lookAt(0, 0, 0); //見つめる方向
 
         // 環境光源を作成
-        const light = new THREE.AmbientLight(0xFFFFFF, 1.0);
+        const light = new THREE.AmbientLight(0xffffff, 1.0);
         light.position.set(0, 0, 10);
         scene.add(light);
         // 平行光源1
@@ -42,6 +42,12 @@
         directionalLight2.position.set(-10, -10, 10);
         // シーンに追加
         scene.add(directionalLight2);
+        // 平行光源3
+        var directionalLight3 = new THREE.DirectionalLight(0xfffffff);
+        directionalLight3.position.set(1, 5, 10);
+        // シーンに追加
+        scene.add(directionalLight3);
+
 
         // helper
         const gridHelper = new THREE.GridHelper(2,10); // size, step
