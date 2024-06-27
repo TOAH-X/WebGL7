@@ -61,7 +61,7 @@
         scene.add(axisHelper);
 
         // 円柱を作成
-        var geometry = new THREE.CylinderGeometry(1, 1, 0.2, 64);
+        var geometry = new THREE.CylinderGeometry(1, 1, 0.05, 64);
         var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var cylinder = new THREE.Mesh(geometry, material);
         cylinder.position.set(0,0,0); //位置を指定
