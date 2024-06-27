@@ -50,7 +50,7 @@
         var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var box = new THREE.Mesh(geometry, material);
         box.position.set(0,0,0); //位置を指定
-        boc.metal=true;
+        box.metal=true;
         scene.add(box);   // シーンに追加
 
         update();
