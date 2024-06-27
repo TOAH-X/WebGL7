@@ -60,12 +60,20 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // 円柱を作成
+        // 円柱(基礎)を作成
         var geometry = new THREE.CylinderGeometry(1, 1, 0.05, 64);
         var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var cylinder = new THREE.Mesh(geometry, material);
         cylinder.position.set(0,0,0); //位置を指定
+        cylinder.rotation.set(0,30,0);
         scene.add(cylinder);   // シーンに追加
+        
+        // 短針を作成
+        var geometry = new THREE.CylinderGeometry(1, 1, 0.4, 64);
+        var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var cylinderH = new THREE.Mesh(geometry, material);
+        cylinderH.position.set(1,0,0); //位置を指定
+        scene.add(cylinderH);   // シーンに追加
 
         update();
 
@@ -75,8 +83,8 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
           // 円柱を回転させる
-          cylinder.rotation.x += 0.01;
-          cylinder.rotation.y += 0.01;
+          //cylinder.rotation.x += 0.01;
+          //cylinder.rotation.y += 0.01;
         }
       }
     </script>
