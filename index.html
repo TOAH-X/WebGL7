@@ -44,10 +44,10 @@
         scene.add(directionalLight2);
 
         // helper
-        // const gridHelper = new THREE.GridHelper(2,10); // size, step
-        // scene.add(gridHelper);
-        // const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
-        // scene.add(axisHelper);
+        const gridHelper = new THREE.GridHelper(2,10); // size, step
+        scene.add(gridHelper);
+        const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
+        scene.add(axisHelper);
 
         // 箱を作成
         var geometry = new THREE.BoxGeometry(1, 1, 1);
