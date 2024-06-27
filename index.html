@@ -47,6 +47,11 @@
         directionalLight3.position.set(-5, 5, 10);
         // シーンに追加
         scene.add(directionalLight3);
+        // 平行光源4
+        var directionalLight4 = new THREE.DirectionalLight(0xfffffff);
+        directionalLight4.position.set(0, 0, 10);
+        // シーンに追加
+        scene.add(directionalLight4);
 
 
         // helper
@@ -55,10 +60,10 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // 箱を作成
+        // 円柱を作成
         var geometry = new THREE.CylinderGeometry(1, 1, 0.2, 64);
         var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
-        var box = new THREE.Mesh(geometry, material);
+        var cylinder = new THREE.Mesh(geometry, material);
         box.position.set(0,0,0); //位置を指定
         scene.add(box);   // シーンに追加
 
@@ -69,9 +74,9 @@
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(update);
-          // 箱を回転させる
-          box.rotation.x += 0.01;
-          box.rotation.y += 0.01;
+          // 円柱を回転させる
+          cylinder.rotation.x += 0.01;
+          cylinder.rotation.y += 0.01;
         }
       }
     </script>
