@@ -30,6 +30,7 @@
 
         // 環境光源を作成
         const light = new THREE.AmbientLight(0xFFFFFF, 1.0);
+        light.position.set(0, 0, 10);
         scene.add(light);
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
