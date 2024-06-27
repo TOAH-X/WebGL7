@@ -47,10 +47,9 @@
 
         // 箱を作成
         var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff,metal:true });
         var box = new THREE.Mesh(geometry, material);
         box.position.set(0,0,0); //位置を指定
-        box.metal=true;
         scene.add(box);   // シーンに追加
 
         update();
