@@ -62,7 +62,8 @@
 
         // 円柱(基礎)を作成
         var geometry = new THREE.CylinderGeometry(1, 1, 0.05, 64);
-        var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var material = new THREE.MeshPhongMaterialMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        //var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var cylinder = new THREE.Mesh(geometry, material);
         cylinder.position.set(0,0,0); //位置を指定
         cylinder.rotation.set(0,30,0);
