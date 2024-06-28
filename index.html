@@ -105,10 +105,10 @@
         // 短針を作成
         var geometryH = new THREE.CylinderGeometry(0.025, 0.025, 0.4, 16);
         //var materialH = new THREE.MeshStandardMaterial({ color: 0x000000,metalness:1,roughness: 0.2 });
-        var materialH = new THREE.MeshPhongMaterial({ color: 0xffff00,metalness:1,roughness: 0.2 });
+        var materialH = new THREE.MeshPhongMaterial({ color: 0xff0000,metalness:1,roughness: 0.2 });
         var cylinderH = new THREE.Mesh(geometryH, materialH);
         cylinderH.position.set(0,0.05,-1); //位置を指定
-        cylinderH.rotation.set(90,0,0);
+        cylinderH.rotation.set(1,0,0);
         scene.add(cylinderH);   // シーンに追加
 
         update();
