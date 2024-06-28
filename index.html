@@ -50,8 +50,8 @@
           // ラジアンに変換する
           const radian = rot * Math.PI / 180;
           // 角度に応じてカメラの位置を設定
-          camera.position.x = 10 * Math.sin(radian);
-          camera.position.z = 10 * Math.cos(radian);
+          camera.position.x = 1 * Math.sin(radian);
+          camera.position.z = 2 * Math.cos(radian);
           // 原点方向を見つめる
           camera.lookAt(new THREE.Vector3(0, 0, 0));
         
