@@ -114,6 +114,15 @@
         torusR.position.set(0,0,0); //位置を指定
         torusR.rotation.set(Math.PI/2,0,0);
         scene.add(torusR);   // シーンに追加
+
+        // 縁装飾1を作成
+        const geometryRO1 = new THREE.TorusGeometry( 1.25, 0.05, 4, 128 ); 
+        //var materialRO1 = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var materialRO1 = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var torusRO1 = new THREE.Mesh(geometryRO1, materialRO1);
+        torusRO1.position.set(0,0,0); //位置を指定
+        torusRO1.rotation.set(Math.PI/2,0,0);
+        scene.add(torusRO1);   // シーンに追加
         
         // ボタン先端を作成
         var geometryB1 = new THREE.CylinderGeometry(0.14, 0.14, 0.1, 64);
