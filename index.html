@@ -283,13 +283,15 @@
           
           if(isRotationN==true)
           {
-            for(var i=0;i<180;i++)
+            var currentAngle=0;
+            if (currentAngle<180)
             {
-              cylinderSWN.rotation.z = -i* Math.PI / 180;
-              if(i==179)
-              {
-                isRotationN=false;
-              }
+              cylinderSWN.rotation.z=-currentAngle*Math.PI/180;
+              currentAngle+=1;
+            }
+            else
+            {
+              isRotationN=false;
             }
           }
           if(isRotationM==true)
