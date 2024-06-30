@@ -106,7 +106,7 @@
         scene.add(cylinder);   // シーンに追加
 
         // 縁を作成
-        const geometryR = new THREE.TorusGeometry( 12, 2, 6, 128 ); 
+        const geometryR = new THREE.TorusGeometry( 1.2, 1.2, 6, 128 ); 
         //var materialR = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var materialR = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var torusR = new THREE.Mesh(geometryR, materialR);
