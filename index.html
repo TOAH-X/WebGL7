@@ -285,7 +285,7 @@
             for(let i=0;i<180;i++)
             {
               cylinderSWN.rotation.z = -i* Math.PI / 180;
-              if(i=180)
+              if(i=179)
               {
                 isRotationN=false;
               }
@@ -293,11 +293,14 @@
           }
           if(isRotationM==true)
           {
-            for(let i=0;i<12;i++)
+            for(let i=0;i<180;i++)
             {
-              cylinderSWM.rotation.z = -i* Math.PI / 12;
+              cylinderSWN.rotation.z = -i* Math.PI / 180;
+              if(i=179)
+              {
+                isRotationN=false;
+              }
             }
-            isRotationM=false;
           }
           
 
