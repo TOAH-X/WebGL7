@@ -123,6 +123,15 @@
         torusRO1.position.set(0,0,0); //位置を指定
         torusRO1.rotation.set(0,0,0);
         scene.add(torusRO1);   // シーンに追加
+
+        // 縁装飾2を作成
+        const geometryRO2 = new THREE.TorusGeometry( 1.35, 0.05, 4, 128 ); 
+        //var materialRO2 = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var materialRO2 = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var torusRO2 = new THREE.Mesh(geometryRO2, materialRO2);
+        torusRO2.position.set(0,0,0); //位置を指定
+        torusRO2.rotation.set(0,0,0);
+        scene.add(torusRO2);   // シーンに追加
         
         // ボタン先端を作成
         var geometryB1 = new THREE.CylinderGeometry(0.14, 0.14, 0.1, 64);
@@ -210,8 +219,12 @@
           // cylinder.rotation.z += 0.01;
 
           //装飾1の回転
-          torusRO1.rotation.y += 0.01;
+          torusRO1.rotation.x += 0.01;
           torusRO1.rotation.z += 0.01;
+
+          //装飾2の回転
+          torusRO2.rotation.x -= 0.01;
+          torusRO2.rotation.z -= 0.01;
 
           angleInDegrees-=0.002;
           var angleInRadians = angleInDegrees * Math.PI / 180;
