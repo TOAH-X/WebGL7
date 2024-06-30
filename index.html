@@ -299,14 +299,20 @@
               isRotationN=false;
             }
           }
-          /*
-          if(isRotationN==true&&angleInRadiansSW<=-Math.PI)
+          if(isRotationM==true)
           {
-            angleSW-=0;
-            cylinderSWM.rotation.z=0;
-            isRotationN=false;
+            angleSW-=2;
+            var angleInRadiansSW=angleSW*Math.PI/180;
+            if(angleInRadiansSW>=-Math.PI)
+            {
+              cylinderSWN.rotation.z=angleInRadiansSW;
+            }
+            else
+            {
+              angleSW=0;
+              isRotationN=false;
+            }
           }
-          */
           
           
 
