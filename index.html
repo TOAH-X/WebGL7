@@ -116,11 +116,11 @@
         scene.add(cylinderB1);   // シーンに追加
 
         // ボタン基部を作成
-        var geometryB2 = new THREE.CylinderGeometry(0.08, 0.08, 0.4, 64);
+        var geometryB2 = new THREE.CylinderGeometry(0.08, 0.08, 0.3, 64);
         //var materialB2 = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var materialB2 = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var cylinderB2 = new THREE.Mesh(geometryB2, materialB2);
-        cylinderB2.position.set(0,0,1.2); //位置を指定
+        cylinderB2.position.set(0,0,1.3); //位置を指定
         cylinderB2.rotation.set(Math.PI/2,0,0);
         scene.add(cylinderB2);   // シーンに追加
 
