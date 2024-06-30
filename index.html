@@ -118,7 +118,7 @@
         // 縁装飾1を作成
         const geometryRO1 = new THREE.TorusGeometry( 1.55, 0.03, 4, 128); 
         //var materialRO1 = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
-        var materialRO1 = new THREE.MeshStandardMaterial({ color: 0x191970,metalness:1,roughness: 0.2 });
+        var materialRO1 = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var torusRO1 = new THREE.Mesh(geometryRO1, materialRO1);
         torusRO1.position.set(0,0,0); //位置を指定
         torusRO1.rotation.set(0,0,0);
@@ -127,7 +127,7 @@
         // 縁装飾2を作成
         const geometryRO2 = new THREE.TorusGeometry( 1.61, 0.03, 4, 128); 
         //var materialRO2 = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
-        var materialRO2 = new THREE.MeshStandardMaterial({ color: 0x191970,metalness:1,roughness: 0.2 });
+        var materialRO2 = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var torusRO2 = new THREE.Mesh(geometryRO2, materialRO2);
         torusRO2.position.set(0,0,0); //位置を指定
         torusRO2.rotation.set(0,0,0);
@@ -178,14 +178,23 @@
         //cylinderN.rotation.set(0,30,0);
         scene.add(cylinderN);   // シーンに追加
 
-        // 空窓を作成
-        var geometrySW = new THREE.CylinderGeometry(0.4, 0.4, 0.001, 64);
-        //var materialSW = new THREE.MeshPhongMaterial({ color: 0xffffff,metalness:1,roughness: 0.2 });
-        var materialSW = new THREE.MeshStandardMaterial({ color: 0x191970,metalness:1,roughness: 0.2 });
-        var cylinderSW = new THREE.Mesh(geometrySW, materialSW);
-        cylinderSW.position.set(0.3,0.052,0.2); //位置を指定
-        //cylinderSW.rotation.set(0,30,0);
-        scene.add(cylinderSW);   // シーンに追加
+        // 空窓(昼)を作成
+        var geometrySWM = new THREE.CylinderGeometry(0.4, 0.4, 0.001, 64);
+        //var materialSWM = new THREE.MeshPhongMaterial({ color: 0xffffff,metalness:1,roughness: 0.2 });
+        var materialSWM = new THREE.MeshStandardMaterial({ color: 0x191970,metalness:1,roughness: 0.2 });
+        var cylinderSWM = new THREE.Mesh(geometrySWM, materialSWM);
+        cylinderSWM.position.set(0.3,0.052,0.2); //位置を指定
+        //cylinderSWM.rotation.set(0,30,0);
+        scene.add(cylinderSWM);   // シーンに追加
+
+        // 空窓(夜)を作成
+        var geometrySWN = new THREE.CylinderGeometry(0.4, 0.4, 0.001, 64);
+        //var materialSWN = new THREE.MeshPhongMaterial({ color: 0xffffff,metalness:1,roughness: 0.2 });
+        var materialSWN = new THREE.MeshStandardMaterial({ color: 0x191970,metalness:1,roughness: 0.2 });
+        var cylinderSWN = new THREE.Mesh(geometrySWN, materialSWN);
+        cylinderSWN.position.set(0.3,0.052,0.2); //位置を指定
+        //cylinderSWN.rotation.set(0,30,0);
+        scene.add(cylinderSWN);   // シーンに追加
         
         // 短針を作成
         var geometryH = new THREE.CylinderGeometry(0.025, 0.025, 0.5, 16);
@@ -219,6 +228,7 @@
         update();
 
         var angleInDegrees=0;
+        boolren night=true;
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
@@ -244,6 +254,13 @@
           cylinderH.position.z = 0.25*Math.cos(angleInRadians);
           cylinderH.rotation.z = -angleInRadians;
 
+          
+          if((-angleInRadians)%360>90&&night==true)
+          {
+            cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
+            night=false;
+          }
+
           //長針の回転
           angleInRadians*=12;
           cylinderM.position.x = 0.4*Math.sin(angleInRadians);
@@ -255,7 +272,6 @@
           cylinderS.position.x = 0.4*Math.sin(angleInRadians);
           cylinderS.position.z = 0.4*Math.cos(angleInRadians);
           cylinderS.rotation.z = -angleInRadians;
-          
         }
       }
     </script>
