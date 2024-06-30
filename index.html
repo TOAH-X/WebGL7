@@ -259,6 +259,12 @@
           {
             cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
             cylinderSWM.position.set(0.3,0.052,0.2); //位置を指定
+            
+            var angleInRadiansSW=0;
+            for(int i=0;i<180;i++)
+              {
+                cylinderSWN.rotation.z = -angleInRadiansSW* Math.PI / 180;
+              }
             isSwitch=true;
           }
           else if((-angleInRadians)%(4*Math.PI)>(3*Math.PI)&&(-angleInRadians)%(4*Math.PI)<(4*Math.PI)&&isSwitch==false)
@@ -267,7 +273,7 @@
             cylinderSWN.position.set(0.3,0.052,0.2); //位置を指定
             isSwitch=true;
           }
-
+          
           if((-angleInRadians)%(4*Math.PI)>(2*Math.PI)&&(-angleInRadians)%(4*Math.PI)<(3*Math.PI)&&isSwitch==true)
           {
             isSwitch=false;
