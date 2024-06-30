@@ -121,7 +121,7 @@
         scene.add(cylinderM);   // シーンに追加
 
         // 秒針針を作成
-        var geometryS = new THREE.CylinderGeometry(0.005, 0.005, 0.1, 16);
+        var geometryS = new THREE.CylinderGeometry(0.005, 0.005, 1, 16);
         //var materialS = new THREE.MeshStandardMaterial({ color: 0x000000,metalness:1,roughness: 0.2 });
         var materialS = new THREE.MeshPhongMaterial({ color: 0x0000ff,metalness:1,roughness: 0.2 });
         var cylinderS = new THREE.Mesh(geometryS, materialS);
