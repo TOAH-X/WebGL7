@@ -133,12 +133,18 @@
           // cylinder.rotation.x += 0.01;
           // cylinder.rotation.z += 0.01;
 
-          //針の回転
           angleInDegrees-=2;
           var angleInRadians = angleInDegrees * Math.PI / 180;
+          //長針の回転
           cylinderH.position.x = 0.25*Math.sin(angleInRadians);
           cylinderH.position.z = 0.25*Math.cos(angleInRadians);
           cylinderH.rotation.z = -angleInRadians;
+
+          //短針の回転
+          angleInRadians*=12;
+          cylinderM.position.x = 0.25*Math.sin(angleInRadians);
+          cylinderM.position.z = 0.25*Math.cos(angleInRadians);
+          cylinderM.rotation.z = -angleInRadians;
         }
       }
     </script>
