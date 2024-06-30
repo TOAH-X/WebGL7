@@ -258,11 +258,13 @@
           if((-angleInRadians)%360>3&&isNight==true)
           {
             cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
+            cylinderSWM.position.set(0.3,0.052,0.2); //位置を指定
             night=false;
           }
           if((-angleInRadians)%360>3&&isNight==false)
           {
-            cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
+            cylinderSWM.position.set(0.3,0.050,0.2); //位置を指定
+            cylinderSWN.position.set(0.3,0.052,0.2); //位置を指定
             night=true;
           }
 
