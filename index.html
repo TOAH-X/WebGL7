@@ -51,7 +51,7 @@
           const radian = rot * Math.PI / 180;
           // 角度に応じてカメラの位置を設定
           camera.position.x = 2 * Math.sin(radian);
-          camera.position.z = 4 * Math.cos(radian);
+          camera.position.z = -4 * Math.cos(radian);
           // 原点方向を見つめる
           camera.lookAt(new THREE.Vector3(0, 0, 0));
         
