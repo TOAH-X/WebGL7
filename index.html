@@ -255,17 +255,17 @@
           cylinderH.rotation.z = -angleInRadians;
 
           
-          if((-angleInRadians)%720>0&&(-angleInRadians)%720<360&&isNight==false)
+          if((-angleInRadians)%720>0&&(-angleInRadians)%720<360&&isSwitch==false)
           {
             cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
             cylinderSWM.position.set(0.3,0.052,0.2); //位置を指定
-            night=true;
+            isSwitch=true;
           }
-          if((-angleInRadians)%720>360&&(-angleInRadians)%720<720&&isNight==false)
+          if((-angleInRadians)%720>360&&(-angleInRadians)%720<720&&isSwitch==false)
           {
             cylinderSWM.position.set(0.3,0.050,0.2); //位置を指定
             cylinderSWN.position.set(0.3,0.052,0.2); //位置を指定
-            night=true;
+            isSwitch=true;
           }
 
           //長針の回転
