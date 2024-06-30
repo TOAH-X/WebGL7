@@ -228,7 +228,7 @@
         update();
 
         var angleInDegrees=0;
-        boolren night=true;
+        var isNight=true;
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
@@ -255,7 +255,7 @@
           cylinderH.rotation.z = -angleInRadians;
 
           
-          if((-angleInRadians)%360>5&&night==true)
+          if((-angleInRadians)%360>5&&isNight==true)
           {
             cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
             night=false;
