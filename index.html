@@ -111,6 +111,15 @@
         cylinderH.rotation.set(1.57,0,0);
         scene.add(cylinderH);   // シーンに追加
 
+        // 長針を作成
+        var geometryM = new THREE.CylinderGeometry(0.01, 0.01, 0.7, 16);
+        //var materialM = new THREE.MeshStandardMaterial({ color: 0x000000,metalness:1,roughness: 0.2 });
+        var materialM = new THREE.MeshPhongMaterial({ color: 0xff00ff,metalness:1,roughness: 0.2 });
+        var cylinderM = new THREE.Mesh(geometryM, materialM);
+        cylinderM.position.set(0,0.05,0.35); //位置を指定
+        cylinderM.rotation.set(1.57,0,0);
+        scene.add(cylinderM);   // シーンに追加
+
         update();
 
         // 毎フレーム時に実行されるループイベントです
