@@ -268,7 +268,8 @@
           }
           else if((-angleInRadians)%(4*Math.PI)>(3*Math.PI)&&(-angleInRadians)%(4*Math.PI)<(4*Math.PI)&&isSwitch==false)
           {
-            cylinderSWM.position.set(0.3,0.050,0.2); //位置を指定
+            cylinderSWN.rotation.z=0.001;
+            cylinderSWM.position.set(0.3,0.051,0.2); //位置を指定
             cylinderSWN.position.set(0.3,0.052,0.2); //位置を指定
             isRotationM=true;
             isSwitch=true;
@@ -297,6 +298,7 @@
             else
             {
               cylinderSWN.rotation.z=0;
+              cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
               angleSW=0;
               isRotationN=false;
             }
@@ -311,7 +313,8 @@
             }
             else
             {
-              
+              cylinderSWM.rotation.z=0;
+              cylinderSWM.position.set(0.3,0.050,0.2); //位置を指定
               angleSW=0;
               isRotationM=false;
             }
