@@ -94,7 +94,7 @@
         scene.add(axisHelper);
         
         // 円柱(基礎)を作成
-        var geometry = new THREE.CylinderGeometry(1, 1, 0.05, 64);
+        var geometry = new THREE.CylinderGeometry(1.2, 1.2, 0.05, 64);
         //var material = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var cylinder = new THREE.Mesh(geometry, material);
@@ -103,9 +103,9 @@
         scene.add(cylinder);   // シーンに追加
         
         // 文字盤を作成
-        var geometryN = new THREE.CylinderGeometry(0.9, 0.9, 0.001, 64);
-        var materialN = new THREE.MeshPhongMaterial({ color: 0xffffff,metalness:1,roughness: 0.2 });
-        //var materialN = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var geometryN = new THREE.CylinderGeometry(1, 1, 0.001, 64);
+        //var materialN = new THREE.MeshPhongMaterial({ color: 0xffffff,metalness:1,roughness: 0.2 });
+        var materialN = new THREE.MeshStandardMaterial({ color: 0xffffff,metalness:1,roughness: 0.2 });
         var cylinderN = new THREE.Mesh(geometryN, materialN);
         cylinderN.position.set(0,0.051,0); //位置を指定
         //cylinderN.rotation.set(0,30,0);
