@@ -285,14 +285,8 @@
           
           if(isRotationN==true)
           {
-            cylinderSWM.rotation.z = -angleInRadians;
-            var currentAngle=0;
-            if(currentAngle<180)
-            {
-              cylinderSWN.rotation.z=-currentAngle*Math.PI/180;
-              currentAngle+=1;
-            }
-            else
+            cylinderSWM.rotation.z=-angleInRadians;
+            if(angleInRadians%Math.PI==0)
             {
               isRotationN=false;
             }
