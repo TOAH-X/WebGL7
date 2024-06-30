@@ -283,12 +283,16 @@
           }
 
           
-          angleSW-=2;
-          var angleInRadiansSW=angleSW*Math.PI/180;
           
-          if(isRotationN==true&&angleInRadiansSW>=-Math.PI)
+          
+          if(isRotationN==true)
           {
-            cylinderSWM.rotation.z=angleInRadiansSW;
+            angleSW-=2;
+            var angleInRadiansSW=angleSW*Math.PI/180;
+            if(angleInRadiansSW>=-Math.PI)
+            {
+              cylinderSWM.rotation.z=angleInRadiansSW;
+            }
           }
           /*
           if(isRotationN==true&&angleInRadiansSW<=-Math.PI)
