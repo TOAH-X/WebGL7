@@ -114,7 +114,7 @@
         // 長針を作成
         var geometryM = new THREE.CylinderGeometry(0.015, 0.015, 0.8, 16);
         //var materialM = new THREE.MeshStandardMaterial({ color: 0x000000,metalness:1,roughness: 0.2 });
-        var materialM = new THREE.MeshPhongMaterial({ color: 0x0000ff,metalness:1,roughness: 0.2 });
+        var materialM = new THREE.MeshPhongMaterial({ color: 0xff00ff,metalness:1,roughness: 0.2 });
         var cylinderM = new THREE.Mesh(geometryM, materialM);
         cylinderM.position.set(0,0.05,0.4); //位置を指定
         cylinderM.rotation.set(Math.PI/2,0,0);
