@@ -133,9 +133,9 @@
           // cylinder.rotation.x += 0.01;
           // cylinder.rotation.z += 0.01;
 
-          angleInDegrees+=1;
+          angleInDegrees+=2;
           var angleInRadians = angleInDegrees * Math.PI / 180;
-          cylinderH.rotation.x = Math.sin(angleInRadians);
+          cylinderH.rotation.z = Math.sin(angleInRadians);
           cylinderH.rotation.z = Math.cos(angleInRadians);
         }
       }
