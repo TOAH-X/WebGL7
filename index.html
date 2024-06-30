@@ -260,10 +260,9 @@
             cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
             cylinderSWM.position.set(0.3,0.052,0.2); //位置を指定
             
-            var angleInRadiansSW=0;
             for(let i=0;i<180;i++)
               {
-                cylinderSWN.rotation.z = -angleInRadiansSW* Math.PI / 180;
+                cylinderSWN.rotation.z = -i* Math.PI / 180;
               }
             isSwitch=true;
           }
