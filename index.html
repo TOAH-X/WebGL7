@@ -206,7 +206,7 @@
         scene.add(cylinderS);   // シーンに追加
 
         // 短針の先端を作成
-        var geometryHT = new THREE.CylinderGeometry(0.05, 0, 1, 3);
+        var geometryHT = new THREE.CylinderGeometry(0.05, 0, 0.01, 3);
         var materialHT = new THREE.MeshStandardMaterial({ color: 0x000000,metalness:1,roughness: 0.2 });
         //var materialHT = new THREE.MeshPhongMaterial({ color: 0x0000ff,metalness:1,roughness: 0.2 });
         var cylinderHT = new THREE.Mesh(geometryHT, materialHT);
