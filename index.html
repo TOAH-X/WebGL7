@@ -138,7 +138,7 @@
         //var materialC = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var materialC = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var cylinderC = new THREE.Mesh(geometryC, materialC);
-        cylinderC.position.set(0,-1.2,0); //位置を指定
+        cylinderC.position.set(0,-0.6,-1.2); //位置を指定
         cylinderC.rotation.set(Math.PI/2,0,0);
         scene.add(cylinderC);   // シーンに追加
 
@@ -147,7 +147,7 @@
         //var materialRC = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var materialRC = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
         var torusRC = new THREE.Mesh(geometryRC, materialRC);
-        torusRC.position.set(0,-1.2,0); //位置を指定
+        torusRC.position.set(0,-0.6,-1.2); //位置を指定
         torusRC.rotation.set(0,0,0);
         scene.add(torusRC);   // シーンに追加
         
