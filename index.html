@@ -286,7 +286,7 @@
           angleSW-=2;
           var angleInRadiansSW=angleSW*Math.PI/180;
           
-          if(isRotationN==true&&angleInRadiansSW<=-Math.PI)
+          if(isRotationN==true&&angleInRadiansSW>=-Math.PI)
           {
             cylinderSWM.rotation.z=angleInRadiansSW;
           }
