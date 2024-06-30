@@ -283,12 +283,15 @@
           }
 
           
-          angleSW+=0.2;
+          angleSW-=0.2;
+          var angleInRadiansSW=angleSW*Math.PI/180;
           if(isRotationN==true)
           {
-            cylinderSWM.rotation.z=-angleSW;
-            if(angleInRadians%Math.PI==0)
+            cylinderSWM.rotation.z=angleInRadiansSW;
+            if(angleInRadiansSW>=Math.PI)
             {
+              angleInRadiansSW=0;
+              cylinderSWM.rotation.z=angleInRadiansSW;
               isRotationN=false;
             }
           }
