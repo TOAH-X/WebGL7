@@ -101,6 +101,15 @@
         cylinder.position.set(0,0,0); //位置を指定
         //cylinder.rotation.set(0,30,0);
         scene.add(cylinder);   // シーンに追加
+
+        // 縁を作成
+        const geometry = new THREE.TorusGeometry( 12, 2, 6, 128 ); 
+        //var material = new THREE.MeshPhongMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var material = new THREE.MeshStandardMaterial({ color: 0xdab300,metalness:1,roughness: 0.2 });
+        var cylinder = new THREE.Mesh(geometry, material);
+        cylinder.position.set(0,0,0); //位置を指定
+        //cylinder.rotation.set(0,30,0);
+        scene.add(cylinder);   // シーンに追加
         
         // 文字盤を作成
         var geometryN = new THREE.CylinderGeometry(1, 1, 0.001, 64);
