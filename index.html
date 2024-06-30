@@ -211,7 +211,7 @@
         //var materialHT = new THREE.MeshPhongMaterial({ color: 0x0000ff,metalness:1,roughness: 0.2 });
         var cylinderHT = new THREE.Mesh(geometryHT, materialHT);
         cylinderHT.position.set(0,0.05,0.25); //位置を指定
-        cylinderHT.rotation.set(0,0,0);
+        cylinderHT.rotation.set(Math.P,0,0);
         scene.add(cylinderHT);   // シーンに追加
 
         update();
