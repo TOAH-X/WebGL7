@@ -289,13 +289,14 @@
             angleSW-=2;
             var angleInRadiansSW=angleSW*Math.PI/180;
             cylinderSWM.rotation.z=angleInRadiansSW;
-            //if(angleInRadiansSW>=Math.PI||1==1)
-            if(1==1)
+
+            angleInRadiansSW=0;
+            angleSW-=0;
+            cylinderSWM.rotation.z=angleInRadiansSW;
+            isRotationN=false;
+            if(angleInRadiansSW>=Math.PI)
             {
-              angleInRadiansSW=0;
-              angleSW-=0;
-              cylinderSWM.rotation.z=angleInRadiansSW;
-              isRotationN=false;
+              
             }
           }
           if(isRotationM==true)
