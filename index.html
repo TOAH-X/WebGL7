@@ -255,7 +255,6 @@
           cylinderH.position.x = 0.25*Math.sin(angleInRadians);
           cylinderH.position.z = 0.25*Math.cos(angleInRadians);
           cylinderH.rotation.z = -angleInRadians;
-          cylinderSWM.rotation.z = -angleInRadians;
 
           
           if((-angleInRadians)%(4*Math.PI)>Math.PI&&(-angleInRadians)%(4*Math.PI)<(2*Math.PI)&&isSwitch==false)
@@ -282,7 +281,8 @@
             isSwitch=false;
           }
 
-          cylinderSWN.rotation.z+=-0.01*Math.PI/180;
+          
+          cylinderSWM.rotation.z = -angleInRadians;
           if(isRotationN==true||1==1)
           {
             var currentAngle=0;
