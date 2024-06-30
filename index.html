@@ -229,6 +229,8 @@
 
         var angleInDegrees=0;
         var isSwitch=false;
+        var isRotationN=false;
+        var isRotationM=false;
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
@@ -259,11 +261,7 @@
           {
             cylinderSWN.position.set(0.3,0.050,0.2); //位置を指定
             cylinderSWM.position.set(0.3,0.052,0.2); //位置を指定
-            
-            for(let i=0;i<180;i++)
-              {
-                cylinderSWN.rotation.z = -i* Math.PI / 180;
-              }
+            isRotationN=true;
             isSwitch=true;
           }
           else if((-angleInRadians)%(4*Math.PI)>(3*Math.PI)&&(-angleInRadians)%(4*Math.PI)<(4*Math.PI)&&isSwitch==false)
@@ -282,6 +280,14 @@
             isSwitch=false;
           }
 
+          if(isRotationN==false)
+          {
+            for(let i=0;i<180;i++)
+            {
+               cylinderSWN.rotation.z = -i* Math.PI / 180;
+            }
+            isRotationN=false;
+          }
           
 
           //長針の回転
