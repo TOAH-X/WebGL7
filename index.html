@@ -130,6 +130,11 @@
           // 円柱を回転させる
           // cylinder.rotation.x += 0.01;
           // cylinder.rotation.z += 0.01;
+
+          angleInDegrees+=0.01;
+          var angleInRadians = angleInDegrees * Math.PI / 180;
+          cylinderH.rotation.x = Math.sin(angleInRadians);
+          cylinderH.rotation.x = Math.cos(angleInRadians);
         }
       }
     </script>
