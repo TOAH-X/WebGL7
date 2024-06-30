@@ -208,10 +208,10 @@
         // 短針の先端を作成
         var geometryHT = new THREE.CylinderGeometry(0.05, 0, 1, 3);
         var materialHT = new THREE.MeshStandardMaterial({ color: 0x000000,metalness:1,roughness: 0.2 });
-        //var materialHT = new THREE.MeshPhongMaterial({ color: 0xff00ff,metalness:1,roughness: 0.2 });
+        //var materialHT = new THREE.MeshPhongMaterial({ color: 0x0000ff,metalness:1,roughness: 0.2 });
         var cylinderHT = new THREE.Mesh(geometryHT, materialHT);
         cylinderHT.position.set(0,0.05,0.25); //位置を指定
-        cylinderHT.rotation.set(Math.PI/2,0,0);
+        cylinderHT.rotation.set(0,0,0);
         scene.add(cylinderHT);   // シーンに追加
 
         update();
@@ -253,6 +253,11 @@
           cylinderS.position.x = 0.4*Math.sin(angleInRadians);
           cylinderS.position.z = 0.4*Math.cos(angleInRadians);
           cylinderS.rotation.z = -angleInRadians;
+
+          //短針の先端の回転
+          cylinderHT.position.x = 0.25*Math.sin(angleInRadians);
+          cylinderHT.position.z = 0.25*Math.cos(angleInRadians);
+          cylinderHT.rotation.z = -angleInRadians;
         }
       }
     </script>
