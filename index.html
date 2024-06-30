@@ -228,6 +228,7 @@
         update();
 
         var angleInDegrees=0;
+        var angleSW=0;
         var isSwitch=false;
         var isRotationN=false;
         var isRotationM=false;
@@ -282,10 +283,10 @@
           }
 
           
-          
+          angleSW+=0.1;
           if(isRotationN==true)
           {
-            cylinderSWM.rotation.z=-angleInRadians;
+            cylinderSWM.rotation.z=-angleSW;
             if(angleInRadians%Math.PI==0)
             {
               isRotationN=false;
